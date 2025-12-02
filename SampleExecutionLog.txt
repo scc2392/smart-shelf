@@ -1,0 +1,3238 @@
+(env) ➜  src python3 main.py
+2025-12-01 12:52:46,316 - Entering init_sessions_db
+2025-12-01 12:52:46,318 - Exiting init_sessions_db
+2025-12-01 12:52:46,318 - Entering init_storage_db
+2025-12-01 12:52:46,318 - Entering load_config
+2025-12-01 12:52:46,318 - Exiting load_config
+2025-12-01 12:52:46,320 - Added 4 storage_space_details from smart_shelf_config.json
+2025-12-01 12:52:46,321 - Exiting init_storage_db
+2025-12-01 12:52:46,321 - Entering main
+Package Storage Assistant
+
+2025-12-01 12:52:46,322 - Plugin 'logging_plugin' registered.
+Ready! Type your request (or 'quit')
+
+You: Store a small package for apartment 12
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-b60ad8d8-bb16-47bb-a9f6-31c1b96920d0
+[logging_plugin]    Session ID: concierge_desk
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfInterfaceAgent
+[logging_plugin]    User Content: text: 'Store a small package for apartment 12'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-b60ad8d8-bb16-47bb-a9f6-31c1b96920d0
+[logging_plugin]    Starting Agent: SmartShelfInterfaceAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-b60ad8d8-bb16-47bb-a9f6-31c1b96920d0
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:53:10,764 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:53:12,548 - Response received from the model.
+2025-12-01 12:53:12,549 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Token Usage - Input: 168, Output: 24
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: f356e766-f7f9-4a63-bdc0-077e058ed100
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['SmartShelfStorageAgent']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-63f86843-ed16-4d21-ba16-2f5726303980
+[logging_plugin]    Arguments: {'request': 'Store a small package for apartment 12'}
+2025-12-01 12:53:12,550 - Plugin 'logging_plugin' registered.
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-3a952731-b896-4ac3-bd41-cd21582f556a
+[logging_plugin]    Session ID: 0d43894e-506a-4c12-9aac-70bda3cab6ff
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfStorageAgent
+[logging_plugin]    User Content: text: 'Store a small package for apartment 12'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-3a952731-b896-4ac3-bd41-cd21582f556a
+[logging_plugin]    Starting Agent: SmartShelfStorageAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-3a952731-b896-4ac3-bd41-cd21582f556a
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:53:12,583 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:53:16,101 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session | function_call: set_size | function_call: set_apartment | function_call: find_available_spots
+[logging_plugin]    Token Usage - Input: 785, Output: 53
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 41598f83-1ce5-463d-99a7-221381cbb3da
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session | function_call: set_size | function_call: set_apartment | function_call: find_available_spots
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['delete_session', 'set_size', 'set_apartment', 'find_available_spots']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-08005c6b-9c2f-48f7-b044-8b95df80436e
+[logging_plugin]    Arguments: {}
+2025-12-01 12:53:16,103 - Entering delete_session
+2025-12-01 12:53:16,104 - Exiting delete_session
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-08005c6b-9c2f-48f7-b044-8b95df80436e
+[logging_plugin]    Result: No session found to delete.
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: set_size
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-757716d2-1924-41ad-baa4-b04858011c25
+[logging_plugin]    Arguments: {'size': 'S'}
+2025-12-01 12:53:16,104 - Entering set_size
+2025-12-01 12:53:16,104 - Entering set_in_session
+2025-12-01 12:53:16,104 - Entering get_or_create_session
+2025-12-01 12:53:16,108 - Exiting set_in_session
+2025-12-01 12:53:16,108 - Entering get_or_create_session
+2025-12-01 12:53:16,108 - Exiting get_or_create_session
+2025-12-01 12:53:16,108 - Exiting set_size
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: set_size
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-757716d2-1924-41ad-baa4-b04858011c25
+[logging_plugin]    Result: {'size': 'S'}
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: set_apartment
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-ea2120f0-31d2-4080-83ee-09b7b6b90434
+[logging_plugin]    Arguments: {'apartment': '12'}
+2025-12-01 12:53:16,109 - Entering set_apartment
+2025-12-01 12:53:16,109 - Entering set_in_session
+2025-12-01 12:53:16,109 - Entering get_or_create_session
+2025-12-01 12:53:16,110 - Exiting get_or_create_session
+2025-12-01 12:53:16,111 - Exiting set_in_session
+2025-12-01 12:53:16,111 - Entering get_or_create_session
+2025-12-01 12:53:16,111 - Exiting get_or_create_session
+2025-12-01 12:53:16,111 - Exiting set_apartment
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: set_apartment
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-ea2120f0-31d2-4080-83ee-09b7b6b90434
+[logging_plugin]    Result: {'size': 'S', 'apartment_number': '12'}
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: find_available_spots
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-ffd5d1ff-eb6f-4b0b-ad97-cccab37eb809
+[logging_plugin]    Arguments: {}
+2025-12-01 12:53:16,112 - Entering find_available_spots
+2025-12-01 12:53:16,112 - Entering get_or_create_session
+2025-12-01 12:53:16,112 - Exiting get_or_create_session
+[TOOL] Available S spots: 2
+2025-12-01 12:53:16,113 - Entering set_in_session
+2025-12-01 12:53:16,113 - Entering get_or_create_session
+2025-12-01 12:53:16,113 - Exiting get_or_create_session
+2025-12-01 12:53:16,114 - Exiting set_in_session
+2025-12-01 12:53:16,114 - Entering set_in_session
+2025-12-01 12:53:16,114 - Entering get_or_create_session
+2025-12-01 12:53:16,115 - Exiting get_or_create_session
+2025-12-01 12:53:16,116 - Exiting set_in_session
+2025-12-01 12:53:16,116 - Entering set_in_session
+2025-12-01 12:53:16,116 - Entering get_or_create_session
+2025-12-01 12:53:16,116 - Exiting get_or_create_session
+2025-12-01 12:53:16,118 - Exiting set_in_session
+2025-12-01 12:53:16,118 - Entering get_or_create_session
+2025-12-01 12:53:16,118 - Exiting get_or_create_session
+2025-12-01 12:53:16,118 - Exiting find_available_spots
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: find_available_spots
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-ffd5d1ff-eb6f-4b0b-ad97-cccab37eb809
+[logging_plugin]    Result: {'size': 'S', 'apartment_number': '12', 'spot_available': True, 'spot_id': 'A1', 'spot_location': 'Lobby Left'}
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 52ae5fca-be3d-4721-9f42-2a3316624f06
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_response: delete_session | function_response: set_size | function_response: set_apartment | function_response: find_available_spots
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['delete_session', 'set_size', 'set_apartment', 'find_available_spots']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:53:16,149 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:53:19,377 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'I've found a suitable spot for your package.
+\
+Spot ID: A1
+Location: Lobby Left
+\
+Would you like to reserve this spot? Please reply with yes or no.'
+[logging_plugin]    Token Usage - Input: 943, Output: 42
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: f0c927fd-80ba-4471-adca-638ef43fd33c
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'I've found a suitable spot for your package.
+\
+Spot ID: A1
+Location: Lobby Left
+\
+Would you like to reserve this spot? Please reply with yes or no.'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-3a952731-b896-4ac3-bd41-cd21582f556a
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-3a952731-b896-4ac3-bd41-cd21582f556a
+[logging_plugin]    Final Agent: SmartShelfStorageAgent
+2025-12-01 12:53:19,379 - Closing runner...
+2025-12-01 12:53:19,379 - Runner closed.
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-63f86843-ed16-4d21-ba16-2f5726303980
+[logging_plugin]    Result: I've found a suitable spot for your package.
+\
+Spot ID: A1
+Location: Lobby Left
+\
+Would you like to reserve this spot? Please reply with yes or no.
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 162277ff-e4cc-4619-8e5b-26c48da21d40
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_response: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['SmartShelfStorageAgent']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:53:19,412 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:53:21,323 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'I've found a suitable spot for your package.
+
+Spot ID: A1
+Location: Lobby Left
+
+Would you like to reserve this spot? Please reply with yes or no.'
+[logging_plugin]    Token Usage - Input: 251, Output: 38
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 40717d19-63b6-44b1-b627-004b5cdae2e8
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'I've found a suitable spot for your package.
+
+Spot ID: A1
+Location: Lobby Left
+
+Would you like to reserve this spot? Please reply with yes or no.'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-b60ad8d8-bb16-47bb-a9f6-31c1b96920d0
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-b60ad8d8-bb16-47bb-a9f6-31c1b96920d0
+[logging_plugin]    Final Agent: SmartShelfInterfaceAgent
+
+Assistant: I've found a suitable spot for your package.
+
+Spot ID: A1
+Location: Lobby Left
+
+Would you like to reserve this spot? Please reply with yes or no.
+
+You: yes
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-fcdc96eb-939a-4ea7-a894-5cd22018e08c
+[logging_plugin]    Session ID: concierge_desk
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfInterfaceAgent
+[logging_plugin]    User Content: text: 'yes'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-fcdc96eb-939a-4ea7-a894-5cd22018e08c
+[logging_plugin]    Starting Agent: SmartShelfInterfaceAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-fcdc96eb-939a-4ea7-a894-5cd22018e08c
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:53:25,068 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:53:27,466 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Token Usage - Input: 292, Output: 16
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 9ba272d7-6a3c-46ed-91e4-9412a290a71a
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['SmartShelfStorageAgent']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-bc1ec503-4487-496b-b973-d98a0da8560c
+[logging_plugin]    Arguments: {'request': 'yes'}
+2025-12-01 12:53:27,468 - Plugin 'logging_plugin' registered.
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-32a65494-6f76-4ffb-bec5-331254f5bd10
+[logging_plugin]    Session ID: c35df212-dcb9-498b-9075-64021be60b6f
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfStorageAgent
+[logging_plugin]    User Content: text: 'yes'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-32a65494-6f76-4ffb-bec5-331254f5bd10
+[logging_plugin]    Starting Agent: SmartShelfStorageAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-32a65494-6f76-4ffb-bec5-331254f5bd10
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:53:27,500 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:53:31,647 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: reserve_spot
+[logging_plugin]    Token Usage - Input: 777, Output: 10
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: e6f03011-ef1b-4b32-aef2-6facb0dcf89f
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: reserve_spot
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['reserve_spot']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: reserve_spot
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-37643d0b-8f11-4005-8ae8-47a40b2d5b09
+[logging_plugin]    Arguments: {}
+2025-12-01 12:53:31,648 - Entering reserve_spot
+2025-12-01 12:53:31,648 - Entering get_or_create_session
+2025-12-01 12:53:31,649 - Exiting get_or_create_session
+Row count is: 1
+[TOOL] reserve_spot(A1, 12) → Success
+2025-12-01 12:53:31,651 - Entering set_in_session
+2025-12-01 12:53:31,651 - Entering get_or_create_session
+2025-12-01 12:53:31,651 - Exiting get_or_create_session
+2025-12-01 12:53:31,653 - Exiting set_in_session
+2025-12-01 12:53:31,653 - Entering get_or_create_session
+2025-12-01 12:53:31,654 - Exiting get_or_create_session
+2025-12-01 12:53:31,654 - Exiting reserve_spot
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: reserve_spot
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-37643d0b-8f11-4005-8ae8-47a40b2d5b09
+[logging_plugin]    Result: {'size': 'S', 'apartment_number': '12', 'spot_available': True, 'spot_id': 'A1', 'spot_location': 'Lobby Left', 'reservation_status': True}
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: d11663ed-7a8f-4d71-86b5-4b42537ea246
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_response: reserve_spot
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['reserve_spot']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:53:31,686 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:53:33,818 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Token Usage - Input: 844, Output: 10
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 91f2c40e-cb74-44e0-bea8-0636c05b7516
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['delete_session']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-7bb77f1f-d407-40ba-a004-01fa0984aa2b
+[logging_plugin]    Arguments: {}
+2025-12-01 12:53:33,819 - Entering delete_session
+2025-12-01 12:53:33,821 - Exiting delete_session
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-7bb77f1f-d407-40ba-a004-01fa0984aa2b
+[logging_plugin]    Result: Session deleted successfully.
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: a1a56b82-54ef-4319-a15a-e8dbd5dfe9df
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_response: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['delete_session']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:53:33,854 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:53:35,658 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'OK. I have reserved storage spot A1 in Lobby Left for a size S package for apartment 12.'
+[logging_plugin]    Token Usage - Input: 872, Output: 23
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: a3844b97-d8cc-417c-945e-01bfc9b60bdf
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'OK. I have reserved storage spot A1 in Lobby Left for a size S package for apartment 12.'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-32a65494-6f76-4ffb-bec5-331254f5bd10
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-32a65494-6f76-4ffb-bec5-331254f5bd10
+[logging_plugin]    Final Agent: SmartShelfStorageAgent
+2025-12-01 12:53:35,659 - Closing runner...
+2025-12-01 12:53:35,659 - Runner closed.
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-bc1ec503-4487-496b-b973-d98a0da8560c
+[logging_plugin]    Result: OK. I have reserved storage spot A1 in Lobby Left for a size S package for apartment 12.
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: f68cc7b9-f4b2-442f-a759-90f77fd25a5a
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_response: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['SmartShelfStorageAgent']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:53:35,692 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:53:36,710 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'OK. I have reserved storage spot A1 in Lobby Left for a size S package for apartment 12.'
+[logging_plugin]    Token Usage - Input: 346, Output: 23
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 0f314ed0-8c0e-4bba-8c40-90fd947c34f2
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'OK. I have reserved storage spot A1 in Lobby Left for a size S package for apartment 12.'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-fcdc96eb-939a-4ea7-a894-5cd22018e08c
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-fcdc96eb-939a-4ea7-a894-5cd22018e08c
+[logging_plugin]    Final Agent: SmartShelfInterfaceAgent
+
+Assistant: OK. I have reserved storage spot A1 in Lobby Left for a size S package for apartment 12.
+
+You: Store a large package for apartment 12
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-fc63998a-42fd-44b9-a7e7-57a535c324ea
+[logging_plugin]    Session ID: concierge_desk
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfInterfaceAgent
+[logging_plugin]    User Content: text: 'Store a large package for apartment 12'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-fc63998a-42fd-44b9-a7e7-57a535c324ea
+[logging_plugin]    Starting Agent: SmartShelfInterfaceAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-fc63998a-42fd-44b9-a7e7-57a535c324ea
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:53:56,154 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:53:58,301 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Token Usage - Input: 380, Output: 24
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: b52edcce-941a-4796-b422-048ce26900d1
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['SmartShelfStorageAgent']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-0efadc61-a696-4f54-b542-ed8ef626b446
+[logging_plugin]    Arguments: {'request': 'Store a large package for apartment 12'}
+2025-12-01 12:53:58,303 - Plugin 'logging_plugin' registered.
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-aa4758a4-18a5-47e0-9f24-123f16ab6f39
+[logging_plugin]    Session ID: db9e0148-d56b-4923-a455-9a0f199d165c
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfStorageAgent
+[logging_plugin]    User Content: text: 'Store a large package for apartment 12'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-aa4758a4-18a5-47e0-9f24-123f16ab6f39
+[logging_plugin]    Starting Agent: SmartShelfStorageAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-aa4758a4-18a5-47e0-9f24-123f16ab6f39
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:53:58,336 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:54:03,526 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session | function_call: set_size | function_call: set_apartment | function_call: find_available_spots
+[logging_plugin]    Token Usage - Input: 785, Output: 53
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 64bf891d-7331-445b-b4d6-39738cfa244d
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session | function_call: set_size | function_call: set_apartment | function_call: find_available_spots
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['delete_session', 'set_size', 'set_apartment', 'find_available_spots']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-e85e6d19-5702-49f8-8a6e-b3ed413ba5d6
+[logging_plugin]    Arguments: {}
+2025-12-01 12:54:03,528 - Entering delete_session
+2025-12-01 12:54:03,528 - Exiting delete_session
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-e85e6d19-5702-49f8-8a6e-b3ed413ba5d6
+[logging_plugin]    Result: No session found to delete.
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: set_size
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-5d836dff-94ac-40bc-9a1d-c8872eaa8c81
+[logging_plugin]    Arguments: {'size': 'L'}
+2025-12-01 12:54:03,529 - Entering set_size
+2025-12-01 12:54:03,529 - Entering set_in_session
+2025-12-01 12:54:03,529 - Entering get_or_create_session
+2025-12-01 12:54:03,532 - Exiting set_in_session
+2025-12-01 12:54:03,532 - Entering get_or_create_session
+2025-12-01 12:54:03,533 - Exiting get_or_create_session
+2025-12-01 12:54:03,533 - Exiting set_size
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: set_size
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-5d836dff-94ac-40bc-9a1d-c8872eaa8c81
+[logging_plugin]    Result: {'size': 'L'}
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: set_apartment
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-8b241602-6146-41e3-8ace-8b70d01bc1b9
+[logging_plugin]    Arguments: {'apartment': '12'}
+2025-12-01 12:54:03,533 - Entering set_apartment
+2025-12-01 12:54:03,533 - Entering set_in_session
+2025-12-01 12:54:03,533 - Entering get_or_create_session
+2025-12-01 12:54:03,534 - Exiting get_or_create_session
+2025-12-01 12:54:03,535 - Exiting set_in_session
+2025-12-01 12:54:03,535 - Entering get_or_create_session
+2025-12-01 12:54:03,536 - Exiting get_or_create_session
+2025-12-01 12:54:03,536 - Exiting set_apartment
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: set_apartment
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-8b241602-6146-41e3-8ace-8b70d01bc1b9
+[logging_plugin]    Result: {'size': 'L', 'apartment_number': '12'}
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: find_available_spots
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-e0e2b236-19e2-401c-8e85-f1140a576865
+[logging_plugin]    Arguments: {}
+2025-12-01 12:54:03,536 - Entering find_available_spots
+2025-12-01 12:54:03,536 - Entering get_or_create_session
+2025-12-01 12:54:03,537 - Exiting get_or_create_session
+[TOOL] Available L spots: 1
+2025-12-01 12:54:03,537 - Entering set_in_session
+2025-12-01 12:54:03,537 - Entering get_or_create_session
+2025-12-01 12:54:03,538 - Exiting get_or_create_session
+2025-12-01 12:54:03,539 - Exiting set_in_session
+2025-12-01 12:54:03,539 - Entering set_in_session
+2025-12-01 12:54:03,539 - Entering get_or_create_session
+2025-12-01 12:54:03,539 - Exiting get_or_create_session
+2025-12-01 12:54:03,540 - Exiting set_in_session
+2025-12-01 12:54:03,540 - Entering set_in_session
+2025-12-01 12:54:03,541 - Entering get_or_create_session
+2025-12-01 12:54:03,541 - Exiting get_or_create_session
+2025-12-01 12:54:03,542 - Exiting set_in_session
+2025-12-01 12:54:03,542 - Entering get_or_create_session
+2025-12-01 12:54:03,542 - Exiting get_or_create_session
+2025-12-01 12:54:03,542 - Exiting find_available_spots
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: find_available_spots
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-e0e2b236-19e2-401c-8e85-f1140a576865
+[logging_plugin]    Result: {'size': 'L', 'apartment_number': '12', 'spot_available': True, 'spot_id': 'B1', 'spot_location': 'Back Hall'}
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 8e8310b6-53a1-4a7d-99d4-dfd8907c942f
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_response: delete_session | function_response: set_size | function_response: set_apartment | function_response: find_available_spots
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['delete_session', 'set_size', 'set_apartment', 'find_available_spots']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:54:03,572 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:54:05,062 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'I have found an available spot for your package in the Back Hall, spot B1. Do you want to reserve this spot? Please reply with yes or no.'
+[logging_plugin]    Token Usage - Input: 942, Output: 33
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: c4590a6b-2d10-4c74-85a7-73ce1db114e0
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'I have found an available spot for your package in the Back Hall, spot B1. Do you want to reserve this spot? Please reply with yes or no.'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-aa4758a4-18a5-47e0-9f24-123f16ab6f39
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-aa4758a4-18a5-47e0-9f24-123f16ab6f39
+[logging_plugin]    Final Agent: SmartShelfStorageAgent
+2025-12-01 12:54:05,063 - Closing runner...
+2025-12-01 12:54:05,063 - Runner closed.
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-0efadc61-a696-4f54-b542-ed8ef626b446
+[logging_plugin]    Result: I have found an available spot for your package in the Back Hall, spot B1. Do you want to reserve this spot? Please reply with yes or no.
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 4342e33a-eb34-4269-943c-2a1ea3500716
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_response: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['SmartShelfStorageAgent']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:54:05,097 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:54:07,311 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'I have found an available spot for your package in the Back Hall, spot B1. Do you want to reserve this spot? Please reply with yes or no.'
+[logging_plugin]    Token Usage - Input: 452, Output: 33
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 2b981cda-3134-4149-a2d2-f7809d9422f5
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'I have found an available spot for your package in the Back Hall, spot B1. Do you want to reserve this spot? Please reply with yes or no.'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-fc63998a-42fd-44b9-a7e7-57a535c324ea
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-fc63998a-42fd-44b9-a7e7-57a535c324ea
+[logging_plugin]    Final Agent: SmartShelfInterfaceAgent
+
+Assistant: I have found an available spot for your package in the Back Hall, spot B1. Do you want to reserve this spot? Please reply with yes or no.
+
+You: no
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-b48e40a7-8e4e-4ef8-b9cc-228f8eb8018c
+[logging_plugin]    Session ID: concierge_desk
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfInterfaceAgent
+[logging_plugin]    User Content: text: 'no'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-b48e40a7-8e4e-4ef8-b9cc-228f8eb8018c
+[logging_plugin]    Starting Agent: SmartShelfInterfaceAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-b48e40a7-8e4e-4ef8-b9cc-228f8eb8018c
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:54:10,438 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:54:13,357 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Token Usage - Input: 488, Output: 16
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 7804144e-dd5b-41ca-8d6d-6673eb38e867
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['SmartShelfStorageAgent']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-d8688506-e1f2-4d13-a2a0-bd291753df80
+[logging_plugin]    Arguments: {'request': 'no'}
+2025-12-01 12:54:13,358 - Plugin 'logging_plugin' registered.
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-6bad66b2-b1a9-493e-95a1-9dff956aa48d
+[logging_plugin]    Session ID: 6b946f3c-7b80-4c5f-85c6-dbf11f10d9be
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfStorageAgent
+[logging_plugin]    User Content: text: 'no'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-6bad66b2-b1a9-493e-95a1-9dff956aa48d
+[logging_plugin]    Starting Agent: SmartShelfStorageAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-6bad66b2-b1a9-493e-95a1-9dff956aa48d
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:54:13,391 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:54:15,610 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Token Usage - Input: 777, Output: 10
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 1d5d20dd-71a6-43b8-bda3-4741f80b268d
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['delete_session']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-b095060b-f8a1-4aaf-bb41-12c59725e5f6
+[logging_plugin]    Arguments: {}
+2025-12-01 12:54:15,611 - Entering delete_session
+2025-12-01 12:54:15,613 - Exiting delete_session
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-b095060b-f8a1-4aaf-bb41-12c59725e5f6
+[logging_plugin]    Result: Session deleted successfully.
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 037afdd4-95e2-461e-9019-1d02f3154998
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_response: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['delete_session']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:54:15,646 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:54:17,556 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'OK. I have cancelled this storage request.'
+[logging_plugin]    Token Usage - Input: 805, Output: 9
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 91756f17-455c-476f-9ac4-4f0d04d5c831
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'OK. I have cancelled this storage request.'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-6bad66b2-b1a9-493e-95a1-9dff956aa48d
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-6bad66b2-b1a9-493e-95a1-9dff956aa48d
+[logging_plugin]    Final Agent: SmartShelfStorageAgent
+2025-12-01 12:54:17,557 - Closing runner...
+2025-12-01 12:54:17,557 - Runner closed.
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-d8688506-e1f2-4d13-a2a0-bd291753df80
+[logging_plugin]    Result: OK. I have cancelled this storage request.
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 2804a1cf-4d2b-4916-b88a-b162faeaebec
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_response: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['SmartShelfStorageAgent']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:54:17,590 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:54:18,681 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'OK. I have cancelled this storage request.'
+[logging_plugin]    Token Usage - Input: 528, Output: 9
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 405cc6dc-8f6b-488c-94e2-1c0c72f6fc2c
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'OK. I have cancelled this storage request.'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-b48e40a7-8e4e-4ef8-b9cc-228f8eb8018c
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-b48e40a7-8e4e-4ef8-b9cc-228f8eb8018c
+[logging_plugin]    Final Agent: SmartShelfInterfaceAgent
+
+Assistant: OK. I have cancelled this storage request.
+
+You: Store a large package for apartment 12
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-803225ed-84cf-4016-8e20-6eb16788d06e
+[logging_plugin]    Session ID: concierge_desk
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfInterfaceAgent
+[logging_plugin]    User Content: text: 'Store a large package for apartment 12'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-803225ed-84cf-4016-8e20-6eb16788d06e
+[logging_plugin]    Starting Agent: SmartShelfInterfaceAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-803225ed-84cf-4016-8e20-6eb16788d06e
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:54:22,492 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:54:24,621 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Token Usage - Input: 548, Output: 24
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 83318e99-ca75-4bb2-934f-77f560f125b3
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['SmartShelfStorageAgent']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-0014bacb-1084-48b5-8560-5497826419d3
+[logging_plugin]    Arguments: {'request': 'Store a large package for apartment 12'}
+2025-12-01 12:54:24,623 - Plugin 'logging_plugin' registered.
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-3efbef6f-5bd9-4680-b385-a2dacb615073
+[logging_plugin]    Session ID: 4ed5dcaf-4dee-4d7b-9204-2adaeece4954
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfStorageAgent
+[logging_plugin]    User Content: text: 'Store a large package for apartment 12'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-3efbef6f-5bd9-4680-b385-a2dacb615073
+[logging_plugin]    Starting Agent: SmartShelfStorageAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-3efbef6f-5bd9-4680-b385-a2dacb615073
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:54:24,656 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:54:28,002 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session | function_call: set_size | function_call: set_apartment | function_call: find_available_spots
+[logging_plugin]    Token Usage - Input: 785, Output: 53
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 03ad9ced-7b07-4d22-800e-fd028043407c
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session | function_call: set_size | function_call: set_apartment | function_call: find_available_spots
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['delete_session', 'set_size', 'set_apartment', 'find_available_spots']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-dc806dc8-e00c-42b6-80ea-8dea3ea6f6c7
+[logging_plugin]    Arguments: {}
+2025-12-01 12:54:28,004 - Entering delete_session
+2025-12-01 12:54:28,004 - Exiting delete_session
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-dc806dc8-e00c-42b6-80ea-8dea3ea6f6c7
+[logging_plugin]    Result: No session found to delete.
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: set_size
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-f8f10f3b-749a-48bc-a574-d73972b20e3b
+[logging_plugin]    Arguments: {'size': 'L'}
+2025-12-01 12:54:28,005 - Entering set_size
+2025-12-01 12:54:28,005 - Entering set_in_session
+2025-12-01 12:54:28,005 - Entering get_or_create_session
+2025-12-01 12:54:28,008 - Exiting set_in_session
+2025-12-01 12:54:28,008 - Entering get_or_create_session
+2025-12-01 12:54:28,009 - Exiting get_or_create_session
+2025-12-01 12:54:28,009 - Exiting set_size
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: set_size
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-f8f10f3b-749a-48bc-a574-d73972b20e3b
+[logging_plugin]    Result: {'size': 'L'}
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: set_apartment
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-875b070d-b357-4652-b8d1-bb0022878919
+[logging_plugin]    Arguments: {'apartment': '12'}
+2025-12-01 12:54:28,009 - Entering set_apartment
+2025-12-01 12:54:28,009 - Entering set_in_session
+2025-12-01 12:54:28,009 - Entering get_or_create_session
+2025-12-01 12:54:28,010 - Exiting get_or_create_session
+2025-12-01 12:54:28,011 - Exiting set_in_session
+2025-12-01 12:54:28,011 - Entering get_or_create_session
+2025-12-01 12:54:28,012 - Exiting get_or_create_session
+2025-12-01 12:54:28,012 - Exiting set_apartment
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: set_apartment
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-875b070d-b357-4652-b8d1-bb0022878919
+[logging_plugin]    Result: {'size': 'L', 'apartment_number': '12'}
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: find_available_spots
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-18c65e80-1a48-480b-b7a1-3420343c40d4
+[logging_plugin]    Arguments: {}
+2025-12-01 12:54:28,012 - Entering find_available_spots
+2025-12-01 12:54:28,012 - Entering get_or_create_session
+2025-12-01 12:54:28,013 - Exiting get_or_create_session
+[TOOL] Available L spots: 1
+2025-12-01 12:54:28,013 - Entering set_in_session
+2025-12-01 12:54:28,013 - Entering get_or_create_session
+2025-12-01 12:54:28,013 - Exiting get_or_create_session
+2025-12-01 12:54:28,015 - Exiting set_in_session
+2025-12-01 12:54:28,015 - Entering set_in_session
+2025-12-01 12:54:28,015 - Entering get_or_create_session
+2025-12-01 12:54:28,015 - Exiting get_or_create_session
+2025-12-01 12:54:28,016 - Exiting set_in_session
+2025-12-01 12:54:28,016 - Entering set_in_session
+2025-12-01 12:54:28,016 - Entering get_or_create_session
+2025-12-01 12:54:28,017 - Exiting get_or_create_session
+2025-12-01 12:54:28,018 - Exiting set_in_session
+2025-12-01 12:54:28,018 - Entering get_or_create_session
+2025-12-01 12:54:28,018 - Exiting get_or_create_session
+2025-12-01 12:54:28,018 - Exiting find_available_spots
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: find_available_spots
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-18c65e80-1a48-480b-b7a1-3420343c40d4
+[logging_plugin]    Result: {'size': 'L', 'apartment_number': '12', 'spot_available': True, 'spot_id': 'B1', 'spot_location': 'Back Hall'}
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 871b3cdf-b68e-4b93-8124-e926712bd4ac
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_response: delete_session | function_response: set_size | function_response: set_apartment | function_response: find_available_spots
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['delete_session', 'set_size', 'set_apartment', 'find_available_spots']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:54:28,050 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:54:31,382 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'I have found a spot for you in the B1 at Back Hall. Should I reserve it for you? (yes/no)'
+[logging_plugin]    Token Usage - Input: 942, Output: 27
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 0b18b222-9cef-4856-86f2-faa2b2e8b858
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'I have found a spot for you in the B1 at Back Hall. Should I reserve it for you? (yes/no)'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-3efbef6f-5bd9-4680-b385-a2dacb615073
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-3efbef6f-5bd9-4680-b385-a2dacb615073
+[logging_plugin]    Final Agent: SmartShelfStorageAgent
+2025-12-01 12:54:31,383 - Closing runner...
+2025-12-01 12:54:31,383 - Runner closed.
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-0014bacb-1084-48b5-8560-5497826419d3
+[logging_plugin]    Result: I have found a spot for you in the B1 at Back Hall. Should I reserve it for you? (yes/no)
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 3980158e-c5f6-4b92-8559-40aac8a76a16
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_response: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['SmartShelfStorageAgent']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:54:31,415 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:54:32,658 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'I have found a spot for you in the B1 at Back Hall. Should I reserve it for you? (yes/no)'
+[logging_plugin]    Token Usage - Input: 614, Output: 27
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 3bb3a6d4-2ed5-4a17-b5fe-4b68aab36317
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'I have found a spot for you in the B1 at Back Hall. Should I reserve it for you? (yes/no)'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-803225ed-84cf-4016-8e20-6eb16788d06e
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-803225ed-84cf-4016-8e20-6eb16788d06e
+[logging_plugin]    Final Agent: SmartShelfInterfaceAgent
+
+Assistant: I have found a spot for you in the B1 at Back Hall. Should I reserve it for you? (yes/no)
+
+You: yes
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-f66ac6f3-e123-4a32-99cf-2827eb1d65aa
+[logging_plugin]    Session ID: concierge_desk
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfInterfaceAgent
+[logging_plugin]    User Content: text: 'yes'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-f66ac6f3-e123-4a32-99cf-2827eb1d65aa
+[logging_plugin]    Starting Agent: SmartShelfInterfaceAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-f66ac6f3-e123-4a32-99cf-2827eb1d65aa
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:54:35,658 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:54:37,729 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Token Usage - Input: 644, Output: 16
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: aaef760e-c302-418d-af18-dd2f7e13f848
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['SmartShelfStorageAgent']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-1cb92184-663d-4163-a0fa-a89337085bc0
+[logging_plugin]    Arguments: {'request': 'yes'}
+2025-12-01 12:54:37,730 - Plugin 'logging_plugin' registered.
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-a5e47bb5-9528-45e3-b5bd-53674eb252fb
+[logging_plugin]    Session ID: a407573c-1002-420a-a007-1b081a16af1b
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfStorageAgent
+[logging_plugin]    User Content: text: 'yes'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-a5e47bb5-9528-45e3-b5bd-53674eb252fb
+[logging_plugin]    Starting Agent: SmartShelfStorageAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-a5e47bb5-9528-45e3-b5bd-53674eb252fb
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:54:37,763 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:54:39,678 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: reserve_spot
+[logging_plugin]    Token Usage - Input: 777, Output: 10
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: ded15eee-833c-4b5c-b75e-1a2cf374003e
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: reserve_spot
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['reserve_spot']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: reserve_spot
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-47959890-e766-4e36-8f0e-813ac30bf4f4
+[logging_plugin]    Arguments: {}
+2025-12-01 12:54:39,679 - Entering reserve_spot
+2025-12-01 12:54:39,679 - Entering get_or_create_session
+2025-12-01 12:54:39,680 - Exiting get_or_create_session
+Row count is: 1
+[TOOL] reserve_spot(B1, 12) → Success
+2025-12-01 12:54:39,682 - Entering set_in_session
+2025-12-01 12:54:39,682 - Entering get_or_create_session
+2025-12-01 12:54:39,683 - Exiting get_or_create_session
+2025-12-01 12:54:39,685 - Exiting set_in_session
+2025-12-01 12:54:39,685 - Entering get_or_create_session
+2025-12-01 12:54:39,685 - Exiting get_or_create_session
+2025-12-01 12:54:39,685 - Exiting reserve_spot
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: reserve_spot
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-47959890-e766-4e36-8f0e-813ac30bf4f4
+[logging_plugin]    Result: {'size': 'L', 'apartment_number': '12', 'spot_available': True, 'spot_id': 'B1', 'spot_location': 'Back Hall', 'reservation_status': True}
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 974e20fc-78c2-4049-9dd6-34195b12e313
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_response: reserve_spot
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['reserve_spot']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:54:39,717 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:54:40,801 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Token Usage - Input: 843, Output: 10
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 9c0de230-2a41-49de-95af-327b921a3a22
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['delete_session']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-fa8e328e-4870-4fcc-83e4-5b3d6521061e
+[logging_plugin]    Arguments: {}
+2025-12-01 12:54:40,802 - Entering delete_session
+2025-12-01 12:54:40,804 - Exiting delete_session
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-fa8e328e-4870-4fcc-83e4-5b3d6521061e
+[logging_plugin]    Result: Session deleted successfully.
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: fcc716a0-b207-49dd-a9d7-1e9461b75dc1
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_response: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['delete_session']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:54:40,839 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:54:42,234 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'OK. Your package is all set. The large package for apartment 12 is in spot B1 in the Back Hall.'
+[logging_plugin]    Token Usage - Input: 871, Output: 26
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 249d746a-dae6-4ed6-9e45-6174c715329a
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'OK. Your package is all set. The large package for apartment 12 is in spot B1 in the Back Hall.'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-a5e47bb5-9528-45e3-b5bd-53674eb252fb
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-a5e47bb5-9528-45e3-b5bd-53674eb252fb
+[logging_plugin]    Final Agent: SmartShelfStorageAgent
+2025-12-01 12:54:42,235 - Closing runner...
+2025-12-01 12:54:42,235 - Runner closed.
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-1cb92184-663d-4163-a0fa-a89337085bc0
+[logging_plugin]    Result: OK. Your package is all set. The large package for apartment 12 is in spot B1 in the Back Hall.
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: d2036fed-2f2b-4c32-b89c-0d7536a92721
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_response: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['SmartShelfStorageAgent']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:54:42,265 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:54:43,359 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'OK. Your package is all set. The large package for apartment 12 is in spot B1 in the Back Hall.'
+[logging_plugin]    Token Usage - Input: 701, Output: 26
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: a7ec694c-99f1-4d56-be3d-cb3c022b8792
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'OK. Your package is all set. The large package for apartment 12 is in spot B1 in the Back Hall.'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-f66ac6f3-e123-4a32-99cf-2827eb1d65aa
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-f66ac6f3-e123-4a32-99cf-2827eb1d65aa
+[logging_plugin]    Final Agent: SmartShelfInterfaceAgent
+
+Assistant: OK. Your package is all set. The large package for apartment 12 is in spot B1 in the Back Hall.
+
+You: Store a large package for apartment 12
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-cfc47342-5002-499f-9548-dc8b9151432b
+[logging_plugin]    Session ID: concierge_desk
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfInterfaceAgent
+[logging_plugin]    User Content: text: 'Store a large package for apartment 12'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-cfc47342-5002-499f-9548-dc8b9151432b
+[logging_plugin]    Starting Agent: SmartShelfInterfaceAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-cfc47342-5002-499f-9548-dc8b9151432b
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:54:54,550 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:54:57,505 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Token Usage - Input: 738, Output: 24
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 621d670f-5fdb-444a-8e0d-bc07753451ce
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['SmartShelfStorageAgent']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-957e48d5-502e-46b8-9765-f06a5be026c9
+[logging_plugin]    Arguments: {'request': 'Store a large package for apartment 12'}
+2025-12-01 12:54:57,507 - Plugin 'logging_plugin' registered.
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-e4906e94-266b-48e6-bbdc-608b8849787f
+[logging_plugin]    Session ID: f9707970-7af3-4517-8acd-46c6e6972eac
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfStorageAgent
+[logging_plugin]    User Content: text: 'Store a large package for apartment 12'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-e4906e94-266b-48e6-bbdc-608b8849787f
+[logging_plugin]    Starting Agent: SmartShelfStorageAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-e4906e94-266b-48e6-bbdc-608b8849787f
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:54:57,540 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:55:03,842 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session | function_call: set_size | function_call: set_apartment | function_call: find_available_spots
+[logging_plugin]    Token Usage - Input: 785, Output: 53
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: d9aa964b-08d3-4254-8257-048fc8ab0c6c
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session | function_call: set_size | function_call: set_apartment | function_call: find_available_spots
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['delete_session', 'set_size', 'set_apartment', 'find_available_spots']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-f0638e7c-ea65-47e1-a025-1d2e82075dfe
+[logging_plugin]    Arguments: {}
+2025-12-01 12:55:03,843 - Entering delete_session
+2025-12-01 12:55:03,844 - Exiting delete_session
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-f0638e7c-ea65-47e1-a025-1d2e82075dfe
+[logging_plugin]    Result: No session found to delete.
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: set_size
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-6331a653-75dd-4034-8c46-d51068519fc9
+[logging_plugin]    Arguments: {'size': 'L'}
+2025-12-01 12:55:03,845 - Entering set_size
+2025-12-01 12:55:03,845 - Entering set_in_session
+2025-12-01 12:55:03,845 - Entering get_or_create_session
+2025-12-01 12:55:03,848 - Exiting set_in_session
+2025-12-01 12:55:03,848 - Entering get_or_create_session
+2025-12-01 12:55:03,848 - Exiting get_or_create_session
+2025-12-01 12:55:03,848 - Exiting set_size
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: set_size
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-6331a653-75dd-4034-8c46-d51068519fc9
+[logging_plugin]    Result: {'size': 'L'}
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: set_apartment
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-f974eae8-3739-41e2-aca6-ed61a4b4b578
+[logging_plugin]    Arguments: {'apartment': '12'}
+2025-12-01 12:55:03,849 - Entering set_apartment
+2025-12-01 12:55:03,849 - Entering set_in_session
+2025-12-01 12:55:03,849 - Entering get_or_create_session
+2025-12-01 12:55:03,849 - Exiting get_or_create_session
+2025-12-01 12:55:03,851 - Exiting set_in_session
+2025-12-01 12:55:03,851 - Entering get_or_create_session
+2025-12-01 12:55:03,851 - Exiting get_or_create_session
+2025-12-01 12:55:03,851 - Exiting set_apartment
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: set_apartment
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-f974eae8-3739-41e2-aca6-ed61a4b4b578
+[logging_plugin]    Result: {'size': 'L', 'apartment_number': '12'}
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: find_available_spots
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-9b216eb0-abdd-4fe7-a674-b1ad8083b8ac
+[logging_plugin]    Arguments: {}
+2025-12-01 12:55:03,852 - Entering find_available_spots
+2025-12-01 12:55:03,852 - Entering get_or_create_session
+2025-12-01 12:55:03,852 - Exiting get_or_create_session
+[TOOL] Available L spots: 0
+2025-12-01 12:55:03,852 - Entering set_in_session
+2025-12-01 12:55:03,852 - Entering get_or_create_session
+2025-12-01 12:55:03,853 - Exiting get_or_create_session
+2025-12-01 12:55:03,854 - Exiting set_in_session
+2025-12-01 12:55:03,854 - Entering get_or_create_session
+2025-12-01 12:55:03,854 - Exiting get_or_create_session
+2025-12-01 12:55:03,854 - Exiting find_available_spots
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: find_available_spots
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-9b216eb0-abdd-4fe7-a674-b1ad8083b8ac
+[logging_plugin]    Result: {'size': 'L', 'apartment_number': '12', 'spot_available': False}
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: bc0d4c74-c48b-4660-bb10-66c66fe75a8d
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_response: delete_session | function_response: set_size | function_response: set_apartment | function_response: find_available_spots
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['delete_session', 'set_size', 'set_apartment', 'find_available_spots']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:55:03,884 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:55:07,527 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Token Usage - Input: 924, Output: 10
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 77b1b3bf-fec4-4ab6-ada6-1c4b309a0614
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['delete_session']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-f22d7b56-94bb-4659-afad-fa6f511eed3a
+[logging_plugin]    Arguments: {}
+2025-12-01 12:55:07,529 - Entering delete_session
+2025-12-01 12:55:07,531 - Exiting delete_session
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-f22d7b56-94bb-4659-afad-fa6f511eed3a
+[logging_plugin]    Result: Session deleted successfully.
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: ceaf0dcd-7070-40b6-b6e6-f47eae89cfac
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_response: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['delete_session']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:55:07,564 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:55:09,063 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'There are no large spots available at this time.'
+[logging_plugin]    Token Usage - Input: 952, Output: 10
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 22ed0270-0d4a-40f5-be29-35a49a3e5647
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'There are no large spots available at this time.'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-e4906e94-266b-48e6-bbdc-608b8849787f
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-e4906e94-266b-48e6-bbdc-608b8849787f
+[logging_plugin]    Final Agent: SmartShelfStorageAgent
+2025-12-01 12:55:09,064 - Closing runner...
+2025-12-01 12:55:09,064 - Runner closed.
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-957e48d5-502e-46b8-9765-f06a5be026c9
+[logging_plugin]    Result: There are no large spots available at this time.
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 386533b3-ca1e-45fd-9155-150220a54da6
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_response: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['SmartShelfStorageAgent']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:55:09,098 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:55:11,214 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'There are no large spots available at this time.'
+[logging_plugin]    Token Usage - Input: 787, Output: 10
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 1958f14a-5ffa-4d33-9e4f-a5f7caaa73c8
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'There are no large spots available at this time.'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-cfc47342-5002-499f-9548-dc8b9151432b
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-cfc47342-5002-499f-9548-dc8b9151432b
+[logging_plugin]    Final Agent: SmartShelfInterfaceAgent
+
+Assistant: There are no large spots available at this time.
+
+You: Store a medium package for apartment 12
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-2ec8ce19-125a-4768-bf90-f27c0056a00e
+[logging_plugin]    Session ID: concierge_desk
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfInterfaceAgent
+[logging_plugin]    User Content: text: 'Store a medium package for apartment 12'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-2ec8ce19-125a-4768-bf90-f27c0056a00e
+[logging_plugin]    Starting Agent: SmartShelfInterfaceAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-2ec8ce19-125a-4768-bf90-f27c0056a00e
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:55:23,951 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:55:26,269 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Token Usage - Input: 808, Output: 24
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 674c2206-ea8f-4558-965a-c5ed4e68e5b1
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['SmartShelfStorageAgent']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-2ad3ec97-825a-4c01-affd-29cb2ed12d6d
+[logging_plugin]    Arguments: {'request': 'Store a medium package for apartment 12'}
+2025-12-01 12:55:26,271 - Plugin 'logging_plugin' registered.
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-e80129b9-8235-4a51-81e9-b6e3d7246900
+[logging_plugin]    Session ID: c7eacac2-cd7d-4204-968d-c59208851c3b
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfStorageAgent
+[logging_plugin]    User Content: text: 'Store a medium package for apartment 12'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-e80129b9-8235-4a51-81e9-b6e3d7246900
+[logging_plugin]    Starting Agent: SmartShelfStorageAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-e80129b9-8235-4a51-81e9-b6e3d7246900
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:55:26,302 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:55:31,083 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Token Usage - Input: 785, Output: 10
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 677f410e-503e-43d6-b31c-8fbe3bacc8d4
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['delete_session']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-1ae2728f-c796-41e0-b55a-b35d7d58ce0a
+[logging_plugin]    Arguments: {}
+2025-12-01 12:55:31,084 - Entering delete_session
+2025-12-01 12:55:31,085 - Exiting delete_session
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-1ae2728f-c796-41e0-b55a-b35d7d58ce0a
+[logging_plugin]    Result: No session found to delete.
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 27069b42-5640-47da-9630-481a2d7e0af1
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_response: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['delete_session']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:55:31,116 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:55:32,310 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: set_size
+[logging_plugin]    Token Usage - Input: 815, Output: 15
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 5af2eb00-f801-4595-9a1f-0b9f419bacc7
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: set_size
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['set_size']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: set_size
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-42d1f38b-5a22-419c-9289-2d9e7c7493a6
+[logging_plugin]    Arguments: {'size': 'M'}
+2025-12-01 12:55:32,311 - Entering set_size
+2025-12-01 12:55:32,311 - Entering set_in_session
+2025-12-01 12:55:32,311 - Entering get_or_create_session
+2025-12-01 12:55:32,315 - Exiting set_in_session
+2025-12-01 12:55:32,315 - Entering get_or_create_session
+2025-12-01 12:55:32,315 - Exiting get_or_create_session
+2025-12-01 12:55:32,315 - Exiting set_size
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: set_size
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-42d1f38b-5a22-419c-9289-2d9e7c7493a6
+[logging_plugin]    Result: {'size': 'M'}
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 78e0ac56-15c1-40f3-aa86-df0268e37b8b
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_response: set_size
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['set_size']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:55:32,347 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:55:33,539 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: set_apartment
+[logging_plugin]    Token Usage - Input: 845, Output: 16
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: d7def870-ee68-4e9c-a296-6ebe6af25b00
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: set_apartment
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['set_apartment']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: set_apartment
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-70a37ec7-50b2-4297-a543-10da3c8b489f
+[logging_plugin]    Arguments: {'apartment': '12'}
+2025-12-01 12:55:33,540 - Entering set_apartment
+2025-12-01 12:55:33,541 - Entering set_in_session
+2025-12-01 12:55:33,541 - Entering get_or_create_session
+2025-12-01 12:55:33,541 - Exiting get_or_create_session
+2025-12-01 12:55:33,543 - Exiting set_in_session
+2025-12-01 12:55:33,543 - Entering get_or_create_session
+2025-12-01 12:55:33,543 - Exiting get_or_create_session
+2025-12-01 12:55:33,543 - Exiting set_apartment
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: set_apartment
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-70a37ec7-50b2-4297-a543-10da3c8b489f
+[logging_plugin]    Result: {'size': 'M', 'apartment_number': '12'}
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 67c8c426-62b5-4eaf-8647-7e6b974db325
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_response: set_apartment
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['set_apartment']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:55:33,575 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:55:34,766 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: find_available_spots
+[logging_plugin]    Token Usage - Input: 885, Output: 12
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: b669ca87-822f-419a-b620-528fa80fb67b
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: find_available_spots
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['find_available_spots']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: find_available_spots
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-120806c5-b5ad-43e7-b467-8d1a3f4bb456
+[logging_plugin]    Arguments: {}
+2025-12-01 12:55:34,767 - Entering find_available_spots
+2025-12-01 12:55:34,767 - Entering get_or_create_session
+2025-12-01 12:55:34,768 - Exiting get_or_create_session
+[TOOL] Available M spots: 1
+2025-12-01 12:55:34,768 - Entering set_in_session
+2025-12-01 12:55:34,768 - Entering get_or_create_session
+2025-12-01 12:55:34,769 - Exiting get_or_create_session
+2025-12-01 12:55:34,771 - Exiting set_in_session
+2025-12-01 12:55:34,771 - Entering set_in_session
+2025-12-01 12:55:34,771 - Entering get_or_create_session
+2025-12-01 12:55:34,771 - Exiting get_or_create_session
+2025-12-01 12:55:34,773 - Exiting set_in_session
+2025-12-01 12:55:34,773 - Entering set_in_session
+2025-12-01 12:55:34,773 - Entering get_or_create_session
+2025-12-01 12:55:34,773 - Exiting get_or_create_session
+2025-12-01 12:55:34,775 - Exiting set_in_session
+2025-12-01 12:55:34,775 - Entering get_or_create_session
+2025-12-01 12:55:34,775 - Exiting get_or_create_session
+2025-12-01 12:55:34,775 - Exiting find_available_spots
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: find_available_spots
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-120806c5-b5ad-43e7-b467-8d1a3f4bb456
+[logging_plugin]    Result: {'size': 'M', 'apartment_number': '12', 'spot_available': True, 'spot_id': 'A2', 'spot_location': 'Lobby Left'}
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 1ae07b9c-1082-4941-bf27-5da57e6d087f
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_response: find_available_spots
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['find_available_spots']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:55:34,807 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:55:36,303 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'I have found an available spot for your medium package in location Lobby Left. Do you want to reserve it?'
+[logging_plugin]    Token Usage - Input: 949, Output: 22
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 2e274937-eb7a-4f42-9014-eab2acf6977f
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'I have found an available spot for your medium package in location Lobby Left. Do you want to reserve it?'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-e80129b9-8235-4a51-81e9-b6e3d7246900
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-e80129b9-8235-4a51-81e9-b6e3d7246900
+[logging_plugin]    Final Agent: SmartShelfStorageAgent
+2025-12-01 12:55:36,304 - Closing runner...
+2025-12-01 12:55:36,305 - Runner closed.
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-2ad3ec97-825a-4c01-affd-29cb2ed12d6d
+[logging_plugin]    Result: I have found an available spot for your medium package in location Lobby Left. Do you want to reserve it?
+
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 91087b1f-c7bb-4089-99f5-91d77b920363
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_response: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['SmartShelfStorageAgent']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:55:36,337 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:55:38,453 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'I have found an available spot for your medium package in location Lobby Left. Do you want to reserve it?'
+[logging_plugin]    Token Usage - Input: 870, Output: 22
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 027bbac1-d2db-417c-aee4-2c03681cda35
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'I have found an available spot for your medium package in location Lobby Left. Do you want to reserve it?'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-2ec8ce19-125a-4768-bf90-f27c0056a00e
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-2ec8ce19-125a-4768-bf90-f27c0056a00e
+[logging_plugin]    Final Agent: SmartShelfInterfaceAgent
+
+Assistant: I have found an available spot for your medium package in location Lobby Left. Do you want to reserve it?
+
+You: yes
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-6a702ce9-0135-4d0f-b653-b9076c8730ae
+[logging_plugin]    Session ID: concierge_desk
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfInterfaceAgent
+[logging_plugin]    User Content: text: 'yes'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-6a702ce9-0135-4d0f-b653-b9076c8730ae
+[logging_plugin]    Starting Agent: SmartShelfInterfaceAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-6a702ce9-0135-4d0f-b653-b9076c8730ae
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:55:47,012 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:55:49,514 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Token Usage - Input: 895, Output: 16
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 9418dcac-747d-4068-a9b8-2ec5eb31d32b
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['SmartShelfStorageAgent']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-3f4c14a9-ed31-4ab8-bb2f-febec9c05664
+[logging_plugin]    Arguments: {'request': 'yes'}
+2025-12-01 12:55:49,516 - Plugin 'logging_plugin' registered.
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-9af54600-48c5-4e22-8df3-e8ec80a3a842
+[logging_plugin]    Session ID: 053843e1-d641-4b23-8d19-2e3a4e2327e6
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfStorageAgent
+[logging_plugin]    User Content: text: 'yes'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-9af54600-48c5-4e22-8df3-e8ec80a3a842
+[logging_plugin]    Starting Agent: SmartShelfStorageAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-9af54600-48c5-4e22-8df3-e8ec80a3a842
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:55:49,547 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:55:53,916 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: reserve_spot
+[logging_plugin]    Token Usage - Input: 777, Output: 10
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: b5bc4508-408e-4f02-931f-90d40d9726fe
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: reserve_spot
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['reserve_spot']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: reserve_spot
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-35092918-5b9b-4a6f-9497-624c1cb8563a
+[logging_plugin]    Arguments: {}
+2025-12-01 12:55:53,918 - Entering reserve_spot
+2025-12-01 12:55:53,918 - Entering get_or_create_session
+2025-12-01 12:55:53,918 - Exiting get_or_create_session
+Row count is: 1
+[TOOL] reserve_spot(A2, 12) → Success
+2025-12-01 12:55:53,920 - Entering set_in_session
+2025-12-01 12:55:53,921 - Entering get_or_create_session
+2025-12-01 12:55:53,921 - Exiting get_or_create_session
+2025-12-01 12:55:53,923 - Exiting set_in_session
+2025-12-01 12:55:53,923 - Entering get_or_create_session
+2025-12-01 12:55:53,923 - Exiting get_or_create_session
+2025-12-01 12:55:53,923 - Exiting reserve_spot
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: reserve_spot
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-35092918-5b9b-4a6f-9497-624c1cb8563a
+[logging_plugin]    Result: {'size': 'M', 'apartment_number': '12', 'spot_available': True, 'spot_id': 'A2', 'spot_location': 'Lobby Left', 'reservation_status': True}
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 3ae40278-53f3-48a1-b74b-21137b30c3ad
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_response: reserve_spot
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['reserve_spot']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:55:53,956 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:55:55,041 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Token Usage - Input: 844, Output: 10
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 7dbc6e46-8ca0-41e7-906b-357a3cd7e52c
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['delete_session']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-832eedbd-88c5-4581-9df3-781242e5a561
+[logging_plugin]    Arguments: {}
+2025-12-01 12:55:55,043 - Entering delete_session
+2025-12-01 12:55:55,044 - Exiting delete_session
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Function Call ID: adk-832eedbd-88c5-4581-9df3-781242e5a561
+[logging_plugin]    Result: Session deleted successfully.
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: f33ae56d-f55c-4693-b04c-ab61bbd6d615
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: function_response: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['delete_session']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    System Instruction: '
+You are a Package Storage Specialist.
+ 
+You will receive user requests.
+ 
+If the request contains package size and apartment number,
+    1. Call delete_session_tool and **wait for it to finish and re...'
+[logging_plugin]    Available Tools: ['set_size', 'set_apartment', 'find_available_spots', 'reserve_spot', 'delete_session']
+2025-12-01 12:55:55,076 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:55:57,395 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'OK. The medium-sized spot A2 in Lobby Left has been reserved for apartment 12.'
+[logging_plugin]    Token Usage - Input: 872, Output: 21
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 367be32e-c44b-4065-95a9-712997499824
+[logging_plugin]    Author: SmartShelfStorageAgent
+[logging_plugin]    Content: text: 'OK. The medium-sized spot A2 in Lobby Left has been reserved for apartment 12.'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfStorageAgent
+[logging_plugin]    Invocation ID: e-9af54600-48c5-4e22-8df3-e8ec80a3a842
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-9af54600-48c5-4e22-8df3-e8ec80a3a842
+[logging_plugin]    Final Agent: SmartShelfStorageAgent
+2025-12-01 12:55:57,397 - Closing runner...
+2025-12-01 12:55:57,397 - Runner closed.
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: SmartShelfStorageAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-3f4c14a9-ed31-4ab8-bb2f-febec9c05664
+[logging_plugin]    Result: OK. The medium-sized spot A2 in Lobby Left has been reserved for apartment 12.
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 3a4568ad-d243-4cb7-9170-1f6524dbc137
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_response: SmartShelfStorageAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['SmartShelfStorageAgent']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:55:57,429 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:55:58,933 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'OK. The medium-sized spot A2 in Lobby Left has been reserved for apartment 12.'
+[logging_plugin]    Token Usage - Input: 947, Output: 21
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: f3e1a503-a379-442d-b7dc-8f933c9aff8e
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'OK. The medium-sized spot A2 in Lobby Left has been reserved for apartment 12.'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-6a702ce9-0135-4d0f-b653-b9076c8730ae
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-6a702ce9-0135-4d0f-b653-b9076c8730ae
+[logging_plugin]    Final Agent: SmartShelfInterfaceAgent
+
+Assistant: OK. The medium-sized spot A2 in Lobby Left has been reserved for apartment 12.
+
+You: Pick up packages from apt 12
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-1a097f76-79bb-4dc7-8395-a3ea86164ff2
+[logging_plugin]    Session ID: concierge_desk
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfInterfaceAgent
+[logging_plugin]    User Content: text: 'Pick up packages from apt 12'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-1a097f76-79bb-4dc7-8395-a3ea86164ff2
+[logging_plugin]    Starting Agent: SmartShelfInterfaceAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-1a097f76-79bb-4dc7-8395-a3ea86164ff2
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:56:17,324 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:56:20,337 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfRetrievalAgent
+[logging_plugin]    Token Usage - Input: 978, Output: 24
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: aaca92fc-e14d-4f84-911a-64018d1f2e2b
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfRetrievalAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['SmartShelfRetrievalAgent']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: SmartShelfRetrievalAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-54e49eb9-4113-421f-99b1-e9b4d4137951
+[logging_plugin]    Arguments: {'request': 'Pick up packages from apt 12'}
+2025-12-01 12:56:20,339 - Plugin 'logging_plugin' registered.
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-c8e54a65-852c-438f-85bd-2c2aaa841ff4
+[logging_plugin]    Session ID: 115f3a3b-5526-4373-8ae4-7de42e0de648
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfRetrievalAgent
+[logging_plugin]    User Content: text: 'Pick up packages from apt 12'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-c8e54a65-852c-438f-85bd-2c2aaa841ff4
+[logging_plugin]    Starting Agent: SmartShelfRetrievalAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfRetrievalAgent
+[logging_plugin]    Invocation ID: e-c8e54a65-852c-438f-85bd-2c2aaa841ff4
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    System Instruction: '
+You are a Package Retrieval Specialist.
+ 
+You will receive a request user requests.
+ 
+If the request contains apartment number,
+    1. Call delete_session_tool and **wait for it to finish and return ...'
+[logging_plugin]    Available Tools: ['set_apartment', 'find_packages', 'release_packages', 'delete_session']
+2025-12-01 12:56:20,370 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:56:22,996 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_call: delete_session | function_call: set_apartment | function_call: find_packages
+[logging_plugin]    Token Usage - Input: 655, Output: 36
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 142de0d4-c688-44df-b668-4155cb4cd244
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_call: delete_session | function_call: set_apartment | function_call: find_packages
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['delete_session', 'set_apartment', 'find_packages']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-a262d863-b3ac-4778-bb0b-1de728fbb153
+[logging_plugin]    Arguments: {}
+2025-12-01 12:56:22,999 - Entering delete_session
+2025-12-01 12:56:22,999 - Exiting delete_session
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-a262d863-b3ac-4778-bb0b-1de728fbb153
+[logging_plugin]    Result: No session found to delete.
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: set_apartment
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-99c1b7c8-948b-4ec8-8c8d-d2ace60a90a2
+[logging_plugin]    Arguments: {'apartment': '12'}
+2025-12-01 12:56:23,000 - Entering set_apartment
+2025-12-01 12:56:23,000 - Entering set_in_session
+2025-12-01 12:56:23,000 - Entering get_or_create_session
+2025-12-01 12:56:23,003 - Exiting set_in_session
+2025-12-01 12:56:23,003 - Entering get_or_create_session
+2025-12-01 12:56:23,004 - Exiting get_or_create_session
+2025-12-01 12:56:23,004 - Exiting set_apartment
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: set_apartment
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-99c1b7c8-948b-4ec8-8c8d-d2ace60a90a2
+[logging_plugin]    Result: {'apartment_number': '12'}
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: find_packages
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-b603f608-46cd-48b3-ab3a-e9884dd91ad1
+[logging_plugin]    Arguments: {}
+2025-12-01 12:56:23,004 - Entering find_packages
+2025-12-01 12:56:23,004 - Entering get_or_create_session
+2025-12-01 12:56:23,005 - Exiting get_or_create_session
+[TOOL] Packages for 12: 3
+2025-12-01 12:56:23,005 - Entering set_in_session
+2025-12-01 12:56:23,005 - Entering get_or_create_session
+2025-12-01 12:56:23,006 - Exiting get_or_create_session
+2025-12-01 12:56:23,007 - Exiting set_in_session
+2025-12-01 12:56:23,007 - Entering set_in_session
+2025-12-01 12:56:23,007 - Entering get_or_create_session
+2025-12-01 12:56:23,007 - Exiting get_or_create_session
+2025-12-01 12:56:23,008 - Exiting set_in_session
+2025-12-01 12:56:23,008 - Entering get_or_create_session
+2025-12-01 12:56:23,009 - Exiting get_or_create_session
+2025-12-01 12:56:23,009 - Exiting find_packages
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: find_packages
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-b603f608-46cd-48b3-ab3a-e9884dd91ad1
+[logging_plugin]    Result: {'apartment_number': '12', 'packages_found': False, 'packages_info': [{'spot_id': 'A1', 'size': 'S', 'location': 'Lobby Left'}, {'spot_id': 'A2', 'size': 'M', 'location': 'Lobby Left'}, {'spot_id': 'B1', 'size': 'L', 'location': 'Back Hall'}]}
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 56e7b081-401e-4211-a12e-600856bed038
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_response: delete_session | function_response: set_apartment | function_response: find_packages
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['delete_session', 'set_apartment', 'find_packages']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    System Instruction: '
+You are a Package Retrieval Specialist.
+ 
+You will receive a request user requests.
+ 
+If the request contains apartment number,
+    1. Call delete_session_tool and **wait for it to finish and return ...'
+[logging_plugin]    Available Tools: ['set_apartment', 'find_packages', 'release_packages', 'delete_session']
+2025-12-01 12:56:23,035 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:56:27,190 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Content: text: 'I found three packages for apartment 12.
+- a S package in spot A1 in the Lobby Left
+- a M package in spot A2 in the Lobby Left
+- a L package in spot B1 in the Back Hall
+Should I release the packages? ...'
+[logging_plugin]    Token Usage - Input: 825, Output: 61
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 5936d25b-c3f0-4212-98c5-f723b85b4fc2
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: text: 'I found three packages for apartment 12.
+- a S package in spot A1 in the Lobby Left
+- a M package in spot A2 in the Lobby Left
+- a L package in spot B1 in the Back Hall
+Should I release the packages? ...'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfRetrievalAgent
+[logging_plugin]    Invocation ID: e-c8e54a65-852c-438f-85bd-2c2aaa841ff4
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-c8e54a65-852c-438f-85bd-2c2aaa841ff4
+[logging_plugin]    Final Agent: SmartShelfRetrievalAgent
+2025-12-01 12:56:27,191 - Closing runner...
+2025-12-01 12:56:27,191 - Runner closed.
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: SmartShelfRetrievalAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-54e49eb9-4113-421f-99b1-e9b4d4137951
+[logging_plugin]    Result: I found three packages for apartment 12.
+- a S package in spot A1 in the Lobby Left
+- a M package in spot A2 in the Lobby Left
+- a L package in spot B1 in the Back Hall
+Should I release the packages? (yes/no)
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: fb833da4-ea2f-41e8-8ad9-a5b052732bef
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_response: SmartShelfRetrievalAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['SmartShelfRetrievalAgent']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:56:27,224 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:56:28,732 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'I found three packages for apartment 12.
+- a S package in spot A1 in the Lobby Left
+- a M package in spot A2 in the Lobby Left
+- a L package in spot B1 in the Back Hall
+Should I release the packages? ...'
+[logging_plugin]    Token Usage - Input: 1082, Output: 61
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 2f7845dc-cd0a-4cdc-9c67-3ee103fcf6df
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'I found three packages for apartment 12.
+- a S package in spot A1 in the Lobby Left
+- a M package in spot A2 in the Lobby Left
+- a L package in spot B1 in the Back Hall
+Should I release the packages? ...'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-1a097f76-79bb-4dc7-8395-a3ea86164ff2
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-1a097f76-79bb-4dc7-8395-a3ea86164ff2
+[logging_plugin]    Final Agent: SmartShelfInterfaceAgent
+
+Assistant: I found three packages for apartment 12.
+- a S package in spot A1 in the Lobby Left
+- a M package in spot A2 in the Lobby Left
+- a L package in spot B1 in the Back Hall
+Should I release the packages? (yes/no)
+
+You: no
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-501c9eb0-afb2-46b8-adda-d8b57855129b
+[logging_plugin]    Session ID: concierge_desk
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfInterfaceAgent
+[logging_plugin]    User Content: text: 'no'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-501c9eb0-afb2-46b8-adda-d8b57855129b
+[logging_plugin]    Starting Agent: SmartShelfInterfaceAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-501c9eb0-afb2-46b8-adda-d8b57855129b
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:56:34,721 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:56:38,665 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfRetrievalAgent
+[logging_plugin]    Token Usage - Input: 1146, Output: 17
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: df3f187f-5bec-4e95-95c1-fd545b632083
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfRetrievalAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['SmartShelfRetrievalAgent']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: SmartShelfRetrievalAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-7e67ef6e-c10c-45c7-9e1a-b2db7752789b
+[logging_plugin]    Arguments: {'request': 'no'}
+2025-12-01 12:56:38,667 - Plugin 'logging_plugin' registered.
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-aaaf5fe6-e834-4300-bd89-8559282d8f26
+[logging_plugin]    Session ID: c855e306-223b-4a50-9f46-e3659021a8e6
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfRetrievalAgent
+[logging_plugin]    User Content: text: 'no'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-aaaf5fe6-e834-4300-bd89-8559282d8f26
+[logging_plugin]    Starting Agent: SmartShelfRetrievalAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfRetrievalAgent
+[logging_plugin]    Invocation ID: e-aaaf5fe6-e834-4300-bd89-8559282d8f26
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    System Instruction: '
+You are a Package Retrieval Specialist.
+ 
+You will receive a request user requests.
+ 
+If the request contains apartment number,
+    1. Call delete_session_tool and **wait for it to finish and return ...'
+[logging_plugin]    Available Tools: ['set_apartment', 'find_packages', 'release_packages', 'delete_session']
+2025-12-01 12:56:38,698 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:56:41,019 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Token Usage - Input: 648, Output: 10
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: c51a472c-d327-4c79-ab18-e7c75ed33ecb
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['delete_session']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-efa2f9d2-596f-4bbb-9541-895b259e20e9
+[logging_plugin]    Arguments: {}
+2025-12-01 12:56:41,020 - Entering delete_session
+2025-12-01 12:56:41,021 - Exiting delete_session
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-efa2f9d2-596f-4bbb-9541-895b259e20e9
+[logging_plugin]    Result: Session deleted successfully.
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: b7905ba6-2413-4177-a57c-042b3ec5782f
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_response: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['delete_session']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    System Instruction: '
+You are a Package Retrieval Specialist.
+ 
+You will receive a request user requests.
+ 
+If the request contains apartment number,
+    1. Call delete_session_tool and **wait for it to finish and return ...'
+[logging_plugin]    Available Tools: ['set_apartment', 'find_packages', 'release_packages', 'delete_session']
+2025-12-01 12:56:41,046 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:56:42,966 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Content: text: 'I have cancelled the release. Is there anything else I can help with?'
+[logging_plugin]    Token Usage - Input: 676, Output: 15
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 9dc12b83-ca9c-439b-82fd-1d1ea35f8bb2
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: text: 'I have cancelled the release. Is there anything else I can help with?'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfRetrievalAgent
+[logging_plugin]    Invocation ID: e-aaaf5fe6-e834-4300-bd89-8559282d8f26
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-aaaf5fe6-e834-4300-bd89-8559282d8f26
+[logging_plugin]    Final Agent: SmartShelfRetrievalAgent
+2025-12-01 12:56:42,967 - Closing runner...
+2025-12-01 12:56:42,967 - Runner closed.
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: SmartShelfRetrievalAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-7e67ef6e-c10c-45c7-9e1a-b2db7752789b
+[logging_plugin]    Result: I have cancelled the release. Is there anything else I can help with?
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 743fa091-8c4e-4897-a489-ab0b55438a3f
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_response: SmartShelfRetrievalAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['SmartShelfRetrievalAgent']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:56:42,999 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:56:45,321 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'I have cancelled the release. Is there anything else I can help with?'
+[logging_plugin]    Token Usage - Input: 1194, Output: 15
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: bfc74ef5-58ab-41a7-bd72-8241ebf2d7a8
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'I have cancelled the release. Is there anything else I can help with?'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-501c9eb0-afb2-46b8-adda-d8b57855129b
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-501c9eb0-afb2-46b8-adda-d8b57855129b
+[logging_plugin]    Final Agent: SmartShelfInterfaceAgent
+
+Assistant: I have cancelled the release. Is there anything else I can help with?
+
+You: Pick up packages from apt 12
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-25ef6290-ef42-4825-9895-2759e6dab6b5
+[logging_plugin]    Session ID: concierge_desk
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfInterfaceAgent
+[logging_plugin]    User Content: text: 'Pick up packages from apt 12'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-25ef6290-ef42-4825-9895-2759e6dab6b5
+[logging_plugin]    Starting Agent: SmartShelfInterfaceAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-25ef6290-ef42-4825-9895-2759e6dab6b5
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:56:48,921 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:56:52,793 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfRetrievalAgent
+[logging_plugin]    Token Usage - Input: 1219, Output: 24
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 48deab2b-e281-46e5-b42d-ab09f02adaf8
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfRetrievalAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['SmartShelfRetrievalAgent']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: SmartShelfRetrievalAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-94731243-6a86-471c-bd69-5e2793ef48ba
+[logging_plugin]    Arguments: {'request': 'Pick up packages from apt 12'}
+2025-12-01 12:56:52,795 - Plugin 'logging_plugin' registered.
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-ef362360-cc06-499b-b042-cb0d0033098e
+[logging_plugin]    Session ID: 4a6f16b6-e33f-42b3-858c-efc740d77b69
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfRetrievalAgent
+[logging_plugin]    User Content: text: 'Pick up packages from apt 12'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-ef362360-cc06-499b-b042-cb0d0033098e
+[logging_plugin]    Starting Agent: SmartShelfRetrievalAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfRetrievalAgent
+[logging_plugin]    Invocation ID: e-ef362360-cc06-499b-b042-cb0d0033098e
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    System Instruction: '
+You are a Package Retrieval Specialist.
+ 
+You will receive a request user requests.
+ 
+If the request contains apartment number,
+    1. Call delete_session_tool and **wait for it to finish and return ...'
+[logging_plugin]    Available Tools: ['set_apartment', 'find_packages', 'release_packages', 'delete_session']
+2025-12-01 12:56:52,825 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:56:55,664 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_call: delete_session | function_call: set_apartment | function_call: find_packages
+[logging_plugin]    Token Usage - Input: 655, Output: 36
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 49e99bfa-0415-439f-b4cb-3b5649a052f1
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_call: delete_session | function_call: set_apartment | function_call: find_packages
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['delete_session', 'set_apartment', 'find_packages']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-69b0c146-1b9f-4160-8ed3-d9bacfffdc73
+[logging_plugin]    Arguments: {}
+2025-12-01 12:56:55,666 - Entering delete_session
+2025-12-01 12:56:55,666 - Exiting delete_session
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-69b0c146-1b9f-4160-8ed3-d9bacfffdc73
+[logging_plugin]    Result: No session found to delete.
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: set_apartment
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-e18cd36f-5801-47d7-b08a-9e033e174667
+[logging_plugin]    Arguments: {'apartment': '12'}
+2025-12-01 12:56:55,667 - Entering set_apartment
+2025-12-01 12:56:55,667 - Entering set_in_session
+2025-12-01 12:56:55,667 - Entering get_or_create_session
+2025-12-01 12:56:55,670 - Exiting set_in_session
+2025-12-01 12:56:55,670 - Entering get_or_create_session
+2025-12-01 12:56:55,671 - Exiting get_or_create_session
+2025-12-01 12:56:55,671 - Exiting set_apartment
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: set_apartment
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-e18cd36f-5801-47d7-b08a-9e033e174667
+[logging_plugin]    Result: {'apartment_number': '12'}
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: find_packages
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-a825336f-3231-4a49-bcd9-5fe1c69fed21
+[logging_plugin]    Arguments: {}
+2025-12-01 12:56:55,671 - Entering find_packages
+2025-12-01 12:56:55,671 - Entering get_or_create_session
+2025-12-01 12:56:55,672 - Exiting get_or_create_session
+[TOOL] Packages for 12: 3
+2025-12-01 12:56:55,672 - Entering set_in_session
+2025-12-01 12:56:55,672 - Entering get_or_create_session
+2025-12-01 12:56:55,673 - Exiting get_or_create_session
+2025-12-01 12:56:55,674 - Exiting set_in_session
+2025-12-01 12:56:55,674 - Entering set_in_session
+2025-12-01 12:56:55,674 - Entering get_or_create_session
+2025-12-01 12:56:55,674 - Exiting get_or_create_session
+2025-12-01 12:56:55,675 - Exiting set_in_session
+2025-12-01 12:56:55,675 - Entering get_or_create_session
+2025-12-01 12:56:55,676 - Exiting get_or_create_session
+2025-12-01 12:56:55,676 - Exiting find_packages
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: find_packages
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-a825336f-3231-4a49-bcd9-5fe1c69fed21
+[logging_plugin]    Result: {'apartment_number': '12', 'packages_found': False, 'packages_info': [{'spot_id': 'A1', 'size': 'S', 'location': 'Lobby Left'}, {'spot_id': 'A2', 'size': 'M', 'location': 'Lobby Left'}, {'spot_id': 'B1', 'size': 'L', 'location': 'Back Hall'}]}
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 12aa4beb-c61c-43c3-bae1-a50b1965aa9c
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_response: delete_session | function_response: set_apartment | function_response: find_packages
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['delete_session', 'set_apartment', 'find_packages']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    System Instruction: '
+You are a Package Retrieval Specialist.
+ 
+You will receive a request user requests.
+ 
+If the request contains apartment number,
+    1. Call delete_session_tool and **wait for it to finish and return ...'
+[logging_plugin]    Available Tools: ['set_apartment', 'find_packages', 'release_packages', 'delete_session']
+2025-12-01 12:56:55,702 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:56:57,609 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Content: text: 'I have found 3 packages for apartment 12.
+- A small package in spot A1 in the Lobby Left
+- A medium package in spot A2 in the Lobby Left
+- A large package in spot B1 in the Back Hall
+Do you want me to...'
+[logging_plugin]    Token Usage - Input: 825, Output: 60
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: e0e344c8-b297-498b-82e5-31fd6598bacc
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: text: 'I have found 3 packages for apartment 12.
+- A small package in spot A1 in the Lobby Left
+- A medium package in spot A2 in the Lobby Left
+- A large package in spot B1 in the Back Hall
+Do you want me to...'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfRetrievalAgent
+[logging_plugin]    Invocation ID: e-ef362360-cc06-499b-b042-cb0d0033098e
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-ef362360-cc06-499b-b042-cb0d0033098e
+[logging_plugin]    Final Agent: SmartShelfRetrievalAgent
+2025-12-01 12:56:57,610 - Closing runner...
+2025-12-01 12:56:57,610 - Runner closed.
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: SmartShelfRetrievalAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-94731243-6a86-471c-bd69-5e2793ef48ba
+[logging_plugin]    Result: I have found 3 packages for apartment 12.
+- A small package in spot A1 in the Lobby Left
+- A medium package in spot A2 in the Lobby Left
+- A large package in spot B1 in the Back Hall
+Do you want me to release them?
+
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 79004919-c4d7-4cb6-81f1-172671aa174f
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_response: SmartShelfRetrievalAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['SmartShelfRetrievalAgent']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:56:57,642 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:57:00,272 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'I have found 3 packages for apartment 12.
+- A small package in spot A1 in the Lobby Left
+- A medium package in spot A2 in the Lobby Left
+- A large package in spot B1 in the Back Hall
+Do you want me to...'
+[logging_plugin]    Token Usage - Input: 1323, Output: 60
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: a55992e1-4232-45e4-9cb9-bb4eb293104e
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'I have found 3 packages for apartment 12.
+- A small package in spot A1 in the Lobby Left
+- A medium package in spot A2 in the Lobby Left
+- A large package in spot B1 in the Back Hall
+Do you want me to...'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-25ef6290-ef42-4825-9895-2759e6dab6b5
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-25ef6290-ef42-4825-9895-2759e6dab6b5
+[logging_plugin]    Final Agent: SmartShelfInterfaceAgent
+
+Assistant: I have found 3 packages for apartment 12.
+- A small package in spot A1 in the Lobby Left
+- A medium package in spot A2 in the Lobby Left
+- A large package in spot B1 in the Back Hall
+Do you want me to release them?
+
+You: yes
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-4b1fda86-c4d9-4265-a8c1-55c63770df18
+[logging_plugin]    Session ID: concierge_desk
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfInterfaceAgent
+[logging_plugin]    User Content: text: 'yes'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-4b1fda86-c4d9-4265-a8c1-55c63770df18
+[logging_plugin]    Starting Agent: SmartShelfInterfaceAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-4b1fda86-c4d9-4265-a8c1-55c63770df18
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:57:04,919 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:57:07,539 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfRetrievalAgent
+[logging_plugin]    Token Usage - Input: 1386, Output: 17
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 03b7a777-cf9a-4e28-a64d-6b9ed255d344
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfRetrievalAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['SmartShelfRetrievalAgent']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: SmartShelfRetrievalAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-05b5bb24-0138-4427-bee4-c86d05c3634e
+[logging_plugin]    Arguments: {'request': 'yes'}
+2025-12-01 12:57:07,541 - Plugin 'logging_plugin' registered.
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-6f58d3dc-37af-4f6e-8a3a-2d04186eee95
+[logging_plugin]    Session ID: 730c7c60-f2c4-4c4f-ad75-b75ad18b4336
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfRetrievalAgent
+[logging_plugin]    User Content: text: 'yes'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-6f58d3dc-37af-4f6e-8a3a-2d04186eee95
+[logging_plugin]    Starting Agent: SmartShelfRetrievalAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfRetrievalAgent
+[logging_plugin]    Invocation ID: e-6f58d3dc-37af-4f6e-8a3a-2d04186eee95
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    System Instruction: '
+You are a Package Retrieval Specialist.
+ 
+You will receive a request user requests.
+ 
+If the request contains apartment number,
+    1. Call delete_session_tool and **wait for it to finish and return ...'
+[logging_plugin]    Available Tools: ['set_apartment', 'find_packages', 'release_packages', 'delete_session']
+2025-12-01 12:57:07,574 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:57:11,638 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_call: release_packages
+[logging_plugin]    Token Usage - Input: 648, Output: 10
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 16034e19-0a31-42e7-a8f7-93e285dd53c2
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_call: release_packages
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['release_packages']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: release_packages
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-d922287c-d6c4-42cd-9026-25557b6539ce
+[logging_plugin]    Arguments: {}
+2025-12-01 12:57:11,640 - Entering release_packages
+2025-12-01 12:57:11,640 - Entering get_or_create_session
+2025-12-01 12:57:11,640 - Exiting get_or_create_session
+[TOOL] release_packages(12) → Released 3 package(s)
+2025-12-01 12:57:11,642 - Entering set_in_session
+2025-12-01 12:57:11,642 - Entering get_or_create_session
+2025-12-01 12:57:11,643 - Exiting get_or_create_session
+2025-12-01 12:57:11,644 - Exiting set_in_session
+2025-12-01 12:57:11,644 - Entering get_or_create_session
+2025-12-01 12:57:11,645 - Exiting get_or_create_session
+2025-12-01 12:57:11,645 - Exiting release_packages
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: release_packages
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-d922287c-d6c4-42cd-9026-25557b6539ce
+[logging_plugin]    Result: {'apartment_number': '12', 'packages_found': False, 'packages_info': [{'spot_id': 'A1', 'size': 'S', 'location': 'Lobby Left'}, {'spot_id': 'A2', 'size': 'M', 'location': 'Lobby Left'}, {'spot_id': 'B1', 'size': 'L', 'location': 'Back Hall'}], 'release_status': True}
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 049fc3e0-c849-4a98-be99-89da3ffa5919
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_response: release_packages
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['release_packages']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    System Instruction: '
+You are a Package Retrieval Specialist.
+ 
+You will receive a request user requests.
+ 
+If the request contains apartment number,
+    1. Call delete_session_tool and **wait for it to finish and return ...'
+[logging_plugin]    Available Tools: ['set_apartment', 'find_packages', 'release_packages', 'delete_session']
+2025-12-01 12:57:11,676 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:57:12,779 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Token Usage - Input: 764, Output: 10
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: a918713f-b679-4bf9-ad26-ed37066b1cd3
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['delete_session']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-f7637245-5a8f-4d70-95a9-1191dabd8b16
+[logging_plugin]    Arguments: {}
+2025-12-01 12:57:12,780 - Entering delete_session
+2025-12-01 12:57:12,782 - Exiting delete_session
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-f7637245-5a8f-4d70-95a9-1191dabd8b16
+[logging_plugin]    Result: Session deleted successfully.
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 04214222-b244-4cb0-ac4e-3b5c2d2df861
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_response: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['delete_session']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    System Instruction: '
+You are a Package Retrieval Specialist.
+ 
+You will receive a request user requests.
+ 
+If the request contains apartment number,
+    1. Call delete_session_tool and **wait for it to finish and return ...'
+[logging_plugin]    Available Tools: ['set_apartment', 'find_packages', 'release_packages', 'delete_session']
+2025-12-01 12:57:12,814 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:57:14,300 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Content: text: 'OK. I have released 3 packages for apartment 12:
+- a S package at Lobby Left A1
+- a M package at Lobby Left A2
+- a L package at Back Hall B1'
+[logging_plugin]    Token Usage - Input: 792, Output: 44
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 5f2a150f-b060-4bd1-9020-641c24a07118
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: text: 'OK. I have released 3 packages for apartment 12:
+- a S package at Lobby Left A1
+- a M package at Lobby Left A2
+- a L package at Back Hall B1'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfRetrievalAgent
+[logging_plugin]    Invocation ID: e-6f58d3dc-37af-4f6e-8a3a-2d04186eee95
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-6f58d3dc-37af-4f6e-8a3a-2d04186eee95
+[logging_plugin]    Final Agent: SmartShelfRetrievalAgent
+2025-12-01 12:57:14,301 - Closing runner...
+2025-12-01 12:57:14,301 - Runner closed.
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: SmartShelfRetrievalAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-05b5bb24-0138-4427-bee4-c86d05c3634e
+[logging_plugin]    Result: OK. I have released 3 packages for apartment 12:
+- a S package at Lobby Left A1
+- a M package at Lobby Left A2
+- a L package at Back Hall B1
+
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: fe3b690e-81cf-46bc-981a-31b14437516a
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_response: SmartShelfRetrievalAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['SmartShelfRetrievalAgent']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:57:14,327 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:57:16,451 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'OK. I have released 3 packages for apartment 12:
+- a S package at Lobby Left A1
+- a M package at Lobby Left A2
+- a L package at Back Hall B1'
+[logging_plugin]    Token Usage - Input: 1467, Output: 44
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: b7d6dc84-7a71-4c02-97d2-1c8db0aa1eb0
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'OK. I have released 3 packages for apartment 12:
+- a S package at Lobby Left A1
+- a M package at Lobby Left A2
+- a L package at Back Hall B1'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-4b1fda86-c4d9-4265-a8c1-55c63770df18
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-4b1fda86-c4d9-4265-a8c1-55c63770df18
+[logging_plugin]    Final Agent: SmartShelfInterfaceAgent
+
+Assistant: OK. I have released 3 packages for apartment 12:
+- a S package at Lobby Left A1
+- a M package at Lobby Left A2
+- a L package at Back Hall B1
+
+You: Pick up packages from apt 12
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-54a55833-3d31-494e-9e28-18f461eafa38
+[logging_plugin]    Session ID: concierge_desk
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfInterfaceAgent
+[logging_plugin]    User Content: text: 'Pick up packages from apt 12'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-54a55833-3d31-494e-9e28-18f461eafa38
+[logging_plugin]    Starting Agent: SmartShelfInterfaceAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-54a55833-3d31-494e-9e28-18f461eafa38
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:57:22,560 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:57:26,179 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfRetrievalAgent
+[logging_plugin]    Token Usage - Input: 1521, Output: 24
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 862fcf51-415a-41e0-bb02-42a19637ce38
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_call: SmartShelfRetrievalAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['SmartShelfRetrievalAgent']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: SmartShelfRetrievalAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-2d801284-5549-4fe6-9315-6923474402a1
+[logging_plugin]    Arguments: {'request': 'Pick up packages from apt 12'}
+2025-12-01 12:57:26,182 - Plugin 'logging_plugin' registered.
+[logging_plugin] 🚀 USER MESSAGE RECEIVED
+[logging_plugin]    Invocation ID: e-37834af1-a4f0-44d5-998d-a25a0622f61a
+[logging_plugin]    Session ID: da1cb65f-e9c6-4a83-bf5e-a566a6372f2f
+[logging_plugin]    User ID: concierge_team
+[logging_plugin]    App Name: SmartShelf
+[logging_plugin]    Root Agent: SmartShelfRetrievalAgent
+[logging_plugin]    User Content: text: 'Pick up packages from apt 12'
+[logging_plugin] 🏃 INVOCATION STARTING
+[logging_plugin]    Invocation ID: e-37834af1-a4f0-44d5-998d-a25a0622f61a
+[logging_plugin]    Starting Agent: SmartShelfRetrievalAgent
+[logging_plugin] 🤖 AGENT STARTING
+[logging_plugin]    Agent Name: SmartShelfRetrievalAgent
+[logging_plugin]    Invocation ID: e-37834af1-a4f0-44d5-998d-a25a0622f61a
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    System Instruction: '
+You are a Package Retrieval Specialist.
+ 
+You will receive a request user requests.
+ 
+If the request contains apartment number,
+    1. Call delete_session_tool and **wait for it to finish and return ...'
+[logging_plugin]    Available Tools: ['set_apartment', 'find_packages', 'release_packages', 'delete_session']
+2025-12-01 12:57:26,213 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:57:28,943 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_call: delete_session | function_call: set_apartment | function_call: find_packages
+[logging_plugin]    Token Usage - Input: 655, Output: 36
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: fc0caa8e-c716-4d6a-bec5-d3a146984263
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_call: delete_session | function_call: set_apartment | function_call: find_packages
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['delete_session', 'set_apartment', 'find_packages']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-6ce681d8-c1c4-4d50-aefa-fedf9dad5807
+[logging_plugin]    Arguments: {}
+2025-12-01 12:57:28,944 - Entering delete_session
+2025-12-01 12:57:28,944 - Exiting delete_session
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-6ce681d8-c1c4-4d50-aefa-fedf9dad5807
+[logging_plugin]    Result: No session found to delete.
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: set_apartment
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-11ef86ab-48a3-41b0-88fd-89cdbc6f5862
+[logging_plugin]    Arguments: {'apartment': '12'}
+2025-12-01 12:57:28,945 - Entering set_apartment
+2025-12-01 12:57:28,945 - Entering set_in_session
+2025-12-01 12:57:28,945 - Entering get_or_create_session
+2025-12-01 12:57:28,947 - Exiting set_in_session
+2025-12-01 12:57:28,947 - Entering get_or_create_session
+2025-12-01 12:57:28,947 - Exiting get_or_create_session
+2025-12-01 12:57:28,948 - Exiting set_apartment
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: set_apartment
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-11ef86ab-48a3-41b0-88fd-89cdbc6f5862
+[logging_plugin]    Result: {'apartment_number': '12'}
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: find_packages
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-04184e42-a809-4315-be10-a0a2aebb9e80
+[logging_plugin]    Arguments: {}
+2025-12-01 12:57:28,948 - Entering find_packages
+2025-12-01 12:57:28,948 - Entering get_or_create_session
+2025-12-01 12:57:28,948 - Exiting get_or_create_session
+[TOOL] Packages for 12: 0
+2025-12-01 12:57:28,948 - Entering set_in_session
+2025-12-01 12:57:28,948 - Entering get_or_create_session
+2025-12-01 12:57:28,949 - Exiting get_or_create_session
+2025-12-01 12:57:28,950 - Exiting set_in_session
+2025-12-01 12:57:28,950 - Entering set_in_session
+2025-12-01 12:57:28,950 - Entering get_or_create_session
+2025-12-01 12:57:28,950 - Exiting get_or_create_session
+2025-12-01 12:57:28,951 - Exiting set_in_session
+2025-12-01 12:57:28,951 - Entering get_or_create_session
+2025-12-01 12:57:28,951 - Exiting get_or_create_session
+2025-12-01 12:57:28,951 - Exiting find_packages
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: find_packages
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-04184e42-a809-4315-be10-a0a2aebb9e80
+[logging_plugin]    Result: {'apartment_number': '12', 'packages_found': False, 'packages_info': []}
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: e97b04d0-0f7e-43d3-974a-a5020321439b
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_response: delete_session | function_response: set_apartment | function_response: find_packages
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['delete_session', 'set_apartment', 'find_packages']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    System Instruction: '
+You are a Package Retrieval Specialist.
+ 
+You will receive a request user requests.
+ 
+If the request contains apartment number,
+    1. Call delete_session_tool and **wait for it to finish and return ...'
+[logging_plugin]    Available Tools: ['set_apartment', 'find_packages', 'release_packages', 'delete_session']
+2025-12-01 12:57:28,976 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:57:31,382 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Token Usage - Input: 757, Output: 10
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: a024872e-ee8f-4552-9ad5-64fe9dec9aa1
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_call: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Calls: ['delete_session']
+[logging_plugin] 🔧 TOOL STARTING
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-0d84b311-73cc-4dcc-bc72-4e73fbcda556
+[logging_plugin]    Arguments: {}
+2025-12-01 12:57:31,383 - Entering delete_session
+2025-12-01 12:57:31,385 - Exiting delete_session
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: delete_session
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Function Call ID: adk-0d84b311-73cc-4dcc-bc72-4e73fbcda556
+[logging_plugin]    Result: Session deleted successfully.
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 363cb86b-9c1b-4d52-8134-f39ceb3f2b92
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: function_response: delete_session
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['delete_session']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    System Instruction: '
+You are a Package Retrieval Specialist.
+ 
+You will receive a request user requests.
+ 
+If the request contains apartment number,
+    1. Call delete_session_tool and **wait for it to finish and return ...'
+[logging_plugin]    Available Tools: ['set_apartment', 'find_packages', 'release_packages', 'delete_session']
+2025-12-01 12:57:31,417 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:57:33,552 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfRetrievalAgent
+[logging_plugin]    Content: text: 'No packages found for apartment 12.'
+[logging_plugin]    Token Usage - Input: 785, Output: 9
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 4894ba4c-3c96-4d83-af42-7a12e532a437
+[logging_plugin]    Author: SmartShelfRetrievalAgent
+[logging_plugin]    Content: text: 'No packages found for apartment 12.'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfRetrievalAgent
+[logging_plugin]    Invocation ID: e-37834af1-a4f0-44d5-998d-a25a0622f61a
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-37834af1-a4f0-44d5-998d-a25a0622f61a
+[logging_plugin]    Final Agent: SmartShelfRetrievalAgent
+2025-12-01 12:57:33,554 - Closing runner...
+2025-12-01 12:57:33,554 - Runner closed.
+[logging_plugin] 🔧 TOOL COMPLETED
+[logging_plugin]    Tool Name: SmartShelfRetrievalAgent
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Function Call ID: adk-2d801284-5549-4fe6-9315-6923474402a1
+[logging_plugin]    Result: No packages found for apartment 12.
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 38f70b49-db6f-49e0-adfe-08a5892aeaaf
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: function_response: SmartShelfRetrievalAgent
+[logging_plugin]    Final Response: False
+[logging_plugin]    Function Responses: ['SmartShelfRetrievalAgent']
+[logging_plugin] 🧠 LLM REQUEST
+[logging_plugin]    Model: gemini-2.5-pro
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    System Instruction: '
+You are the friendly Package Storage Assistant.
+ 
+- If user wants to store/drop/leave a package → call SmartShelfStorageAgent
+- If user wants to pick up/retrieve/collect → call SmartShelfRetrievalAge...'
+[logging_plugin]    Available Tools: ['SmartShelfStorageAgent', 'SmartShelfRetrievalAgent']
+2025-12-01 12:57:33,587 - Sending out request, model: gemini-2.5-pro, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-12-01 12:57:35,600 - Response received from the model.
+[logging_plugin] 🧠 LLM RESPONSE
+[logging_plugin]    Agent: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'No packages found for apartment 12.'
+[logging_plugin]    Token Usage - Input: 1570, Output: 9
+[logging_plugin] 📢 EVENT YIELDED
+[logging_plugin]    Event ID: 665137af-62bc-43bf-b518-d986b797e072
+[logging_plugin]    Author: SmartShelfInterfaceAgent
+[logging_plugin]    Content: text: 'No packages found for apartment 12.'
+[logging_plugin]    Final Response: True
+[logging_plugin] 🤖 AGENT COMPLETED
+[logging_plugin]    Agent Name: SmartShelfInterfaceAgent
+[logging_plugin]    Invocation ID: e-54a55833-3d31-494e-9e28-18f461eafa38
+[logging_plugin] ✅ INVOCATION COMPLETED
+[logging_plugin]    Invocation ID: e-54a55833-3d31-494e-9e28-18f461eafa38
+[logging_plugin]    Final Agent: SmartShelfInterfaceAgent
+
+Assistant: No packages found for apartment 12.
+
+You: quit
+Goodbye!
+2025-12-01 12:57:41,571 - Exiting main
+(env) ➜  src 

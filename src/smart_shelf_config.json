@@ -1,0 +1,8 @@
+{
+  "storage_space_details": [
+    {"spot_id": "A1", "size": "S", "location": "Lobby Left"},
+    {"spot_id": "A2", "size": "M", "location": "Lobby Left"},
+    {"spot_id": "B1", "size": "L", "location": "Back Hall"},
+    {"spot_id": "B2", "size": "S", "location": "Back Hall"}
+  ]
+}

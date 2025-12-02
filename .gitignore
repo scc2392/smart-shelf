@@ -1,0 +1,19 @@
+# Database
+*.db
+
+# Python
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
+
+# LOG
+*.log
+
+# IDE
+.idea/
+.vscode/
+
+# MAC
+.DS_Store
